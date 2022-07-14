@@ -35,7 +35,7 @@ def move(_x, _y, _dx, _dy, _c):
 def bfs():
     while q:
         rx, ry, bx, by, d = q.popleft()
-        if d >= 10:
+        if d > 9:
             break
         for i in range(4):
             nrx, nry, rc = move(rx, ry, dx[i], dy[i], 0)
@@ -43,7 +43,7 @@ def bfs():
             if grid[nbx][nby] == 'O':
                 continue
             if grid[nrx][nry] == 'O':
-                print(d)
+                print(d+1)
                 return
             if nrx == nbx and nry == nby:
                 if rc > bc:
@@ -53,7 +53,7 @@ def bfs():
             if not check[nrx][nry][nbx][nby]:
                 check[nrx][nry][nbx][nby] = True
                 q.append((nrx, nry, nbx, nby, d+1))
-    print(0)
+    print(-1)
 
 
 init()
