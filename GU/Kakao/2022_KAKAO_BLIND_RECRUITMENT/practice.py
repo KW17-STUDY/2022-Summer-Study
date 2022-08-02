@@ -9,3 +9,8 @@ def recursive(n, l_arrow):
 
 
 recursive(4, [0 for _ in range(4)])
+
+def is_num(num):
+    return num != 1
+
+print(is_num(1))
