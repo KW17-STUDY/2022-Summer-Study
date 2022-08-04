@@ -157,3 +157,8 @@ for directions in cases:
     if maximum_value < value:
         maximum_value = value
 print(maximum_value)
+
+'''
+# 2차원 배열에서 최대값 구하기: max(map(max, board))
+# 2차원 배열 돌리기: list(map(list, zip(*array)))
+'''
