@@ -84,16 +84,16 @@ def solution(str1, str2):
     temp = list(set(temp))
     for i in temp:
         if i in str1_dict.keys() and i in str2_dict.keys():
-            for j in range(min(str1_dict[i], str2_dict[i])):
+            for _ in range(min(str1_dict[i], str2_dict[i])):
                 inter.append(i)
-            for j in range(max(str1_dict[i], str2_dict[i])):
+            for _ in range(max(str1_dict[i], str2_dict[i])):
                 total.append(i)
         else:
             if i in str1_dict.keys():
-                for j in range(str1_dict[i]):
+                for _ in range(str1_dict[i]):
                     total.append(i)
             if i in str2_dict.keys():
-                for j in range(str2_dict[i]):
+                for _ in range(str2_dict[i]):
                     total.append(i)
                 
     if len(total) == 0:
@@ -161,7 +161,7 @@ def solution(str1, str2):
     answer = floor((intersection_len / union_len) * 65536)
 
     return answer
-    '''
+'''
 # Remind
 1. 교집합, 차집합, 합집합 구하기
 s1 = set([1, 2, 3, 4, 5, 6])
