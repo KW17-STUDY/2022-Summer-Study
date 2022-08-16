@@ -37,3 +37,6 @@ print(Counter1 | Counter2)
 print((Counter1 | Counter2).elements())
 print(list((Counter1 | Counter2).elements()))
 
+str1 = 'abcde'
+print(str1[:50])
+
