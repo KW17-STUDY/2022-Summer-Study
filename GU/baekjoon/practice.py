@@ -107,3 +107,20 @@ person_dict['peach'] += 1
 # 자동적으로 person_dict['peach']의 값이 0으로 초기화되어 1이 저장
 
 print(person_dict)
+
+from collections import deque
+num_list = deque([1,2,3])
+a = num_list.popleft()
+print(a)
+print(num_list)
+
+dir = 0
+print((dir-1)%4)
+
+for i in range(3):
+    for j in range(4):
+        print(j)
+        if j==3:
+            print('break')
+            break
+    print('hello')
