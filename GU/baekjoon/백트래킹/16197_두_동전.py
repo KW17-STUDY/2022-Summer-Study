@@ -39,7 +39,6 @@ def bfs(_1x, _1y, _2x, _2y):
                 continue
     return -1
 
-
 n, m = map(int, input().rstrip().split())
 grid = [list(input().rstrip()) for _ in range(n)]
 coins = []
@@ -69,5 +68,8 @@ num이 10일 때, 32번 라인과 34번 라인에 의해서 11 return하게
 visited = [[[[False for _ in range(M)] for _ in range(N)] for _ in range(M)] for _ in range(N)]
 visited[x1][y1][x2][y2] = True
 
+Reference: https://velog.io/@ckstn0778/%EB%B0%B1%EC%A4%80-16197%EB%B2%88-%EB%91%90-%EB%8F%99%EC%A0%84-1-Python
 
+4. 40번째 라인 return -1넣어야함.
+queue 자체가 종료되었다는건 못찾았다는 의미!
 '''
